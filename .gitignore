@@ -1,0 +1,27 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# JavaScript / TypeScript
+node_modules/
+dist/
+
+# Foundry generated files and local dependencies
+contracts/cache/
+contracts/out/
+contracts/broadcast/
+contracts/lib/
+
+# Editor and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

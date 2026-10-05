@@ -1,0 +1,162 @@
+{
+  "SVM": {
+    "1.0": {
+      "file": "SVM_v1.0.pkl",
+      "hash": "b1e60cc6e24082e0317385caf003b7aa156e440f3a8d39496bdfb2ed57c68170",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.2,
+      "random_seed": 42,
+      "train_docs": 400,
+      "test_docs": 100
+    },
+    "2.0": {
+      "file": "SVM_v2.0.pkl",
+      "hash": "e28f8dfa775ed013ed3e1a91afb4bd765d657a0bdc2c1f685926f9b94c35f826",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.2,
+      "random_seed": 7,
+      "train_docs": 400,
+      "test_docs": 100
+    },
+    "3.0": {
+      "file": "SVM_v3.0.pkl",
+      "hash": "f92f8a53972afb192ccf0f8ab67688e1b8b3d2052f230766395cc8c2bd959067",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.4,
+      "random_seed": 99,
+      "train_docs": 300,
+      "test_docs": 200
+    }
+  },
+  "SGD": {
+    "1.0": {
+      "file": "SGD_v1.0.pkl",
+      "hash": "4c8512f1832b8facf993c81e839a592990e75a8a76b8a6ccde009d2734032704",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.2,
+      "random_seed": 42,
+      "train_docs": 400,
+      "test_docs": 100
+    },
+    "2.0": {
+      "file": "SGD_v2.0.pkl",
+      "hash": "cceefc2d59bbc8cce97a4c47fffa3efd9e09cb22c56e89c06fac4d7f1359719b",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.2,
+      "random_seed": 7,
+      "train_docs": 400,
+      "test_docs": 100
+    },
+    "3.0": {
+      "file": "SGD_v3.0.pkl",
+      "hash": "a69becdad43231ac02655f04fa409f2cb97f3dfe3a7945aa8209ce804b4134f0",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.4,
+      "random_seed": 99,
+      "train_docs": 300,
+      "test_docs": 200
+    }
+  },
+  "NaiveBayes": {
+    "1.0": {
+      "file": "NaiveBayes_v1.0.pkl",
+      "hash": "21de0aa1b4039bdef545f2303212cc0a3130f1a767e1b5c416c3e719e3a34273",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.2,
+      "random_seed": 42,
+      "train_docs": 400,
+      "test_docs": 100
+    },
+    "2.0": {
+      "file": "NaiveBayes_v2.0.pkl",
+      "hash": "10f99376e4484436a2f53d28ccb93475fd17842c5741a37c5b1215d23b2dfbca",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.2,
+      "random_seed": 7,
+      "train_docs": 400,
+      "test_docs": 100
+    },
+    "3.0": {
+      "file": "NaiveBayes_v3.0.pkl",
+      "hash": "0b4a9cef02c5256745e3ca177657dea23f9b96111d04bcc5c1e44edf9f93c81e",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.4,
+      "random_seed": 99,
+      "train_docs": 300,
+      "test_docs": 200
+    }
+  },
+  "RandomForest": {
+    "1.0": {
+      "file": "RandomForest_v1.0.pkl",
+      "hash": "3ff9e9d4b9fd2e12a72ebedbc366a0e952a7b5e16dc76d9f01c09e5ff47b52bb",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.2,
+      "random_seed": 42,
+      "train_docs": 400,
+      "test_docs": 100
+    },
+    "2.0": {
+      "file": "RandomForest_v2.0.pkl",
+      "hash": "179aae66246c0dd5b8d7769550e26818709197bb4d5cac2036259a1dc92d6e5a",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.2,
+      "random_seed": 7,
+      "train_docs": 400,
+      "test_docs": 100
+    },
+    "3.0": {
+      "file": "RandomForest_v3.0.pkl",
+      "hash": "820ed1811ee3d3a0f87e5c2a6f9dbaa36ee361c4bbdae5a8d9b418218d47ae9f",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.4,
+      "random_seed": 99,
+      "train_docs": 300,
+      "test_docs": 200
+    }
+  },
+  "LogisticRegression": {
+    "1.0": {
+      "file": "LogisticRegression_v1.0.pkl",
+      "hash": "f99c243eb5c6d3a8f5d2defd50c4bec44bc644268b482b4b835c47c79ddeab65",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.2,
+      "random_seed": 42,
+      "train_docs": 400,
+      "test_docs": 100
+    },
+    "2.0": {
+      "file": "LogisticRegression_v2.0.pkl",
+      "hash": "13484ed462d65e4d978f629fc34b2f16e6066bcea9a41a3adeb797c50a40e031",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.2,
+      "random_seed": 7,
+      "train_docs": 400,
+      "test_docs": 100
+    },
+    "3.0": {
+      "file": "LogisticRegression_v3.0.pkl",
+      "hash": "5d8ec376e53a4357df1791dc4406879207e6afd66dc49ddfa49b3602d53e22a1",
+      "accuracy": 1.0,
+      "f1_score": 1.0,
+      "test_size": 0.4,
+      "random_seed": 99,
+      "train_docs": 300,
+      "test_docs": 200
+    }
+  }
+}

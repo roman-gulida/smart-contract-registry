@@ -1,0 +1,15 @@
+services:
+  seaweedfs:
+    image: chrislusf/seaweedfs
+    container_name: seaweedfs
+    ports:
+      - "8333:8333"   # S3 API gateway
+      - "9333:9333"   # Master server
+      - "8080:8080"   # Volume server
+    command: "server -s3 -dir=/data"
+    volumes:
+      - seaweedfs_data:/data
+    restart: unless-stopped
+
+volumes:
+  seaweedfs_data:

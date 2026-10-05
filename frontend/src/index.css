@@ -1,0 +1,326 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", sans-serif;
+  --font-mono: "DM Mono", monospace;
+
+  --color-bg: #f7f6f3;
+  --color-surface: #ffffff;
+  --color-border: #e2e0d9;
+  --color-border-strong: #c8c5bc;
+
+  --color-ink: #1a1916;
+  --color-ink-muted: #6b6860;
+  --color-ink-faint: #a8a59e;
+
+  --color-accent-hover: #333129;
+
+  --color-finance-bg: #eaf3ee;
+  --color-finance-text: #2d6a4f;
+  --color-hr-bg: #e8edf4;
+  --color-hr-text: #1d3557;
+  --color-legal-bg: #f4e8eb;
+  --color-legal-text: #6b2d3e;
+  --color-logistics-bg: #f5ece0;
+  --color-logistics-text: #7b4f12;
+  --color-salary-bg: #ecedf4;
+  --color-salary-text: #3d405b;
+
+  --color-success: #2d6a4f;
+  --color-success-bg: #eaf3ee;
+  --color-success-border: #b7d9c4;
+  --color-error: #c0392b;
+  --color-error-bg: #fdf2f2;
+  --color-error-border: #f5c6cb;
+  --color-warning: #7b4f12;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    @apply antialiased;
+    font-family: var(--font-sans);
+  }
+
+  body {
+    @apply m-0 min-h-screen bg-bg text-ink text-sm;
+    line-height: 1.6;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-bg;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-sm bg-border-strong;
+  }
+}
+
+@layer components {
+  .sidebar {
+    @apply fixed top-0 left-0 h-full w-56 flex flex-col z-10;
+    @apply bg-surface border-r border-border;
+  }
+
+  .sidebar-logo {
+    @apply px-6 py-5 border-b border-border text-shadow-md;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded text-sm transition-colors font-normal text-ink-muted;
+  }
+
+  .nav-link:hover {
+    @apply bg-bg text-ink;
+  }
+
+  .nav-link-active {
+    @apply font-medium bg-bg text-ink;
+  }
+
+  .page {
+    @apply px-8 py-12;
+  }
+
+  .page-label {
+    @apply text-xs tracking-widest uppercase mb-2 font-mono text-ink-faint;
+  }
+
+  .page-title {
+    @apply text-2xl font-semibold tracking-tight text-ink;
+  }
+
+  .page-description {
+    @apply text-sm text-ink-muted;
+  }
+
+  .card {
+    @apply rounded bg-surface border border-border;
+  }
+
+  .card-header {
+    @apply px-5 py-2.5 bg-bg border-b border-border;
+  }
+
+  .card-header-label {
+    @apply text-xs font-medium uppercase tracking-wider font-mono text-ink-faint;
+  }
+
+  .card-row {
+    @apply flex items-center justify-between gap-8 px-5 py-3 border-b border-border;
+  }
+
+  .card-row-label {
+    @apply text-xs shrink-0 font-mono text-ink-faint;
+    width: 110px;
+  }
+
+  .card-footer {
+    @apply px-5 py-3 flex gap-3 border-t border-border bg-bg;
+  }
+
+  .field-label {
+    @apply text-xs font-medium text-ink-muted;
+  }
+
+  .field-input {
+    @apply w-full text-sm outline-none transition-colors rounded font-mono;
+    @apply bg-bg border border-border text-ink;
+    padding: 8px 10px;
+  }
+
+  .field-input:focus {
+    @apply border-border-strong;
+  }
+
+  .field-input::placeholder {
+    @apply text-ink-faint;
+  }
+
+  .search-input {
+    @apply flex-1 text-sm outline-none rounded bg-bg border border-border text-ink;
+    padding: 6px 10px;
+  }
+
+  .filter-select {
+    @apply text-sm outline-none rounded bg-bg border border-border text-ink font-mono;
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+
+  .hash-search-input {
+    @apply flex-1 outline-none rounded bg-surface border border-border-strong text-ink font-mono;
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .btn-primary {
+    @apply text-sm font-medium tracking-wide transition-colors cursor-pointer rounded border-none;
+    @apply disabled:opacity-40 disabled:cursor-not-allowed;
+    @apply bg-ink text-white;
+    padding: 10px 20px;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    @apply bg-accent-hover;
+  }
+
+  .btn-ghost {
+    @apply text-sm transition-colors cursor-pointer bg-transparent border-none p-0 text-ink-muted;
+  }
+
+  .btn-ghost:hover {
+    @apply text-ink;
+  }
+
+  .dropzone {
+    @apply cursor-pointer transition-colors rounded text-center bg-surface;
+    border: 1.5px dashed var(--color-border-strong);
+    padding: 40px 24px;
+  }
+
+  .dropzone:hover {
+    @apply bg-black/1;
+  }
+
+  .dropzone-dragging {
+    @apply bg-black/2 border-ink;
+  }
+
+  .alert-error {
+    @apply text-sm px-3 py-2 rounded text-error bg-error-bg border border-error-border;
+  }
+
+  .banner {
+    @apply flex items-center gap-3 px-4 py-3 rounded;
+  }
+
+  .banner-success {
+    @apply bg-success-bg border border-success-border;
+  }
+
+  .banner-error {
+    @apply bg-error-bg border border-error-border;
+  }
+
+  .banner-neutral {
+    @apply bg-bg border border-border;
+  }
+
+  .table-wrapper {
+    @apply rounded border border-border;
+  }
+
+  .table-header {
+    @apply grid items-center px-5 py-3 bg-bg border-b border-border;
+  }
+
+  .table-col-label {
+    @apply text-xs uppercase tracking-wider font-mono text-ink-faint;
+  }
+
+  .sort-btn {
+    @apply flex items-center gap-1 text-xs font-medium uppercase tracking-wider;
+    @apply font-mono bg-transparent border-none cursor-pointer p-0 transition-colors;
+  }
+
+  .table-row {
+    @apply grid items-center px-5 py-3 transition-colors;
+  }
+
+  .table-row:hover {
+    @apply bg-black/2.5;
+  }
+
+  .result-topbar {
+    @apply flex items-center justify-between px-5 py-3 bg-ink text-white;
+  }
+
+  .result-topbar-label {
+    @apply text-xs tracking-widest uppercase font-mono opacity-70;
+  }
+
+  .mono-faint {
+    @apply font-mono text-ink-faint;
+    font-size: 12px;
+  }
+
+  .mono-sm {
+    @apply font-mono text-ink-muted;
+    font-size: 12px;
+  }
+
+  .text-success {
+    @apply text-success;
+  }
+
+  .text-error {
+    @apply text-error;
+  }
+
+  .text-warning {
+    @apply text-warning;
+  }
+
+  .text-muted {
+    @apply text-ink-muted;
+  }
+
+  .text-faint {
+    @apply text-ink-faint;
+  }
+
+  .text-ink {
+    @apply text-ink;
+  }
+
+  .hash-text {
+    @apply font-mono text-ink-muted;
+    font-size: 12px;
+  }
+
+  .filters-bar {
+    @apply flex flex-wrap items-center gap-3 mb-6 p-4 rounded bg-surface border border-border;
+  }
+
+  .badge-base {
+    @apply inline-block rounded font-mono font-medium uppercase tracking-wide leading-relaxed;
+  }
+
+  .badge-md {
+    font-size: 12px;
+    padding: 3px 9px;
+  }
+
+  .badge-sm {
+    font-size: 11px;
+    padding: 2px 7px;
+  }
+
+  .badge-finance {
+    @apply bg-finance-bg text-finance-text;
+  }
+
+  .badge-hr {
+    @apply bg-hr-bg text-hr-text;
+  }
+
+  .badge-legal {
+    @apply bg-legal-bg text-legal-text;
+  }
+
+  .badge-logistics {
+    @apply bg-logistics-bg text-logistics-text;
+  }
+
+  .badge-salary {
+    @apply bg-salary-bg text-salary-text;
+  }
+}
